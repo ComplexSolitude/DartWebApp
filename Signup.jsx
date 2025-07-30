@@ -16,7 +16,7 @@ export default function Signup() {
     if (loading) return;
     setError(null);
 
-    // ✅ VALIDATION
+    // Input validation
     if (!firstName.trim()) return setError('First name is required');
     if (!lastName.trim()) return setError('Last name is required');
     if (!email.includes('@') || !email.includes('.')) return setError('Invalid email address');
