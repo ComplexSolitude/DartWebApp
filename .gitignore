@@ -1,5 +1,6 @@
 node_modules/
 .env
 .DS_Store
-
+VITE_SUPABASE_URL=https://uajzqizasoeupysrkuwl.supabase.co
+VITE_SUPABASE_ANON_KEY=sb_secret_avYaNkqv5NRnEerwNVIy8Q_qMirJlol
 dist/
