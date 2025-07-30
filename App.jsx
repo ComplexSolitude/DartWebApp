@@ -2,10 +2,10 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { createClient } from '@supabase/supabase-js';
-import Login from './pages/Login';
-import Dashboard from './pages/Dashboard';
-import Match from './pages/Match';
-import Signup from './pages/Signup';
+import Login from './Login';
+import Dashboard from './Dashboard';
+import Match from './Match';
+import Signup from './Signup';
 
 
 const supabase = createClient(
@@ -34,7 +34,7 @@ export default function App() {
         <Route path="/" element={user ? <Navigate to="/dashboard" /> : <Login supabase={supabase} />} />
         <Route path="/dashboard" element={user ? <Dashboard supabase={supabase} user={user} /> : <Navigate to="/" />} />
         <Route path="/match/:id" element={user ? <Match supabase={supabase} user={user} /> : <Navigate to="/" />} />
-        <Route path="/" element={<Login />} />
+        <Route path="/login" element={<Login supabase={supabase} />} />
         <Route path="/signup" element={<Signup />} />
       </Routes>
     </Router>
