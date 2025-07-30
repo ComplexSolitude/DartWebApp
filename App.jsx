@@ -31,10 +31,13 @@ export default function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={user ? <Navigate to="/dashboard" /> : <Login supabase={supabase} />} />
+        <Route
+          path="/"
+          element={user ? <Navigate to="/dashboard" /> : <Navigate to="/login" />}
+        />
         <Route path="/dashboard" element={user ? <Dashboard supabase={supabase} user={user} /> : <Navigate to="/" />} />
         <Route path="/match/:id" element={user ? <Match supabase={supabase} user={user} /> : <Navigate to="/" />} />
-        <Route path="/" element={<Login />} />
+        <Route path="/login" element={<Login supabase={supabase} />} />
         <Route path="/signup" element={<Signup />} />
       </Routes>
     </Router>
