@@ -35,9 +35,17 @@ npm run build
 ```
 You can preview the build locally with `npm run preview`.
 
----
+## Testing
 
-For additional information about running tests, you can use:
+This project relies on the `jsdom` test environment provided by
+`jest-environment-jsdom`. Install it if you haven't already:
+
+```bash
+npm install --save-dev jest-environment-jsdom
+```
+
+Run the test suite with:
+
 ```bash
 npm test
 ```
