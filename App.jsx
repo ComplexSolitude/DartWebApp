@@ -1,17 +1,13 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { createClient } from '@supabase/supabase-js';
+import { supabase } from './supabase.js';
 import Login from './Login';
 import Dashboard from './Dashboard';
 import Match from './Match';
 import Signup from './Signup';
 
 
-const supabase = createClient(
-  import.meta.env.VITE_SUPABASE_URL,
-  import.meta.env.VITE_SUPABASE_ANON_KEY
-);
 
 export default function App() {
   const [user, setUser] = useState(null);
